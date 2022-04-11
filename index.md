@@ -1,37 +1,257 @@
-## Welcome to GitHub Pages
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="text-align:center;">出校信息表</title>
 
-You can use the [editor on GitHub](https://github.com/ELHAMJOHN/test.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-color: #eeeeee;
+			font-size: 1rem;
+		}
+		.up{
+			width: 100vw;
+			height: 7vh;
+      color:#888;
+			background-color: white;
+		}
+		.up-text{
+			width: 45vw;
+			height: 6.5vh;
+			font-size: 1.1rem;
+			margin-left: 1vw;
+      text-align: center;
+      line-height: 6.5vh;
+      /* display: flex;
+      align-items: center; */
+			border-bottom: 3px solid #5383ec;
+		}
+    .up-text2{
+			width: 45vw;
+			height: 6.5vh;
+			font-size: 1.1rem;
+			margin-left: 1vw;
+      text-align: center;
+      line-height: 6.5vh;
+      /* display: flex;
+      align-items: center; */
+		}
+		.topic{
+      width: 95vw;
+      height: 6.5vh;
+      font-size: 0.9rem;
+      line-height: 6.5vh;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+      /*margin-left: 3vw;*/
+      padding-left: 4vw;
+      background-color: white;
+      font-weight: bold;
+		}
+    /*.topic img{
+      width: 2.5vh;
+      height: 2.5vh;
+      margin-right: 1vw;
+      transform: translateY(10%);
+    }*/
+    .icon{
+      margin-top: 2vh;
+      width: 2.5vh;
+      height: 2.5vh;
+      margin-right: 1vw;
+      transform: translateY(10%);
+    }
+    .arrow{
+      width: 2.5vw;
+      height: 1vh;
+      margin-top: 2.5vh;
+      text-align: right;
+      padding-right: 3%;
+      transform: translateY(10%);
+    }
+    .info-title{
+      width: 94vw;
+      height: 6.5vh;
+      color: #888;
+      background-color: #f2f5fa;
+      line-height: 6.5vh;
+      padding-left: 5%;
+      /*margin-left: 3vw;
+      margin-top: 3vw;
+      margin-bottom: 3vw;*/
+      text-align: left;
+    }
+    .info-text{
+      width: 94vw;
+      height: 7vh;
+      color: #76777a;
+      line-height: 7vh;
+      background-color: white;
+      text-align: left;
+      padding-left: 5%;
+    }
+    .QR-code{
+      width: 100vw;
+      color: #76777a;
+      background-color: white;
+      text-align: center;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+    .QR-code img{
+      width: 40vw;
+      height: 40vw;
+    }
+    .permit{
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #01bb00;
+    }
+    .info-last{
+      margin-bottom: 1vh;
+    }
+    .footer{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding-left: 2vw;
+      padding-top: 4vw;
+      padding-bottom: 2vw;
+      width: 100vw;
+      height: 6.5vh;
+      background-color: white;
+    }
+    .gengduo{
+      width: 30vw;
+      height: 6vh;
+      border: 1px solid #5383ec;
+      border-radius: 50px;
+      color: #5383ec;
+      text-align: center;
+      line-height: 6vh;
+    }
+    .input-box{
+      width: 80vw;
+      /* height: 40vh; */
+      margin-top: 20vh;
+      margin-left: 10vw;
+      margin-bottom: 5vh;
+      border: 5px solid #5383ec;
+      border-radius: 50px;
+      font-size: 1.2rem;
+    }
+    .input-box div{
+      width: 70vw;
+      height: 5vh;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .toptabla_img{ 
+      width: 9px; height: 5px; 
+    }
+    .button{
+      margin-right: 2vw;
+    }
+	</style>
+</head>
+<body class="vsc-initialized">
+  <div class="input-box" id="input-box" style="text-align: center; display: none;">
+    <p style="font-size: 2rem;">人类高质量出校码</p>
+    <div>你的部门：<input type="text" name="" id="input-school" placeholder="本科部玉泉书院" field_signature="513454351" form_signature="8404015848584033285"></div>
+    <div>你的名字：<input type="text" name="" id="input-name" placeholder="刘思源" field_signature="246837635" form_signature="8404015848584033285"></div>
+    <div>你的学号：<input type="text" name="" id="input-number" placeholder="2019nt945945" field_signature="1852501389" form_signature="8404015848584033285"></div>
+    <div><button onclick="Enter(0)">一键退学</button></div>
+  </div>
+	<div class="content" id="content" style="">
+		<!--<div class="up">
+      <a class="up-text">申请表单</a>
+      <a class="up-text2" text-align="center">办事流程</a>
+      <a class="up-text2" text-align="right">处理记录</a>
+    </div>-->
+    <p class="topic">
+      <img src="./9sa8fc9ah2.PNG" class="icon"><a id="info-school">当前部门：本科部玉泉书院</a>
+      <img src="./down.png" align="right" class="arrow">
+    </p>
+		<div class="topic">
+      <img src="./04d93329ad7c7ab4.png" class="icon">行程管理
+    </div>
+    <div class="infos">
+      <div class="info">
+        <div class="info-title">学生姓名</div>
+        <div class="info-text" id="info-name">刘思源</div>
+      </div>
+      <div class="info">
+        <div class="info-title">学号</div>
+        <div class="info-text" id="info-number">2019nt945945</div>
+      </div>
+      <div class="info">
+        <div class="info-title">出校时间</div>
+        <b><font size="5"><div class="info-text" id="time">2022-04-11 12:57</div></font></b>
+      </div>
+      <div class="info">
+        <div class="info-title">通行码</div>
+        <div class="QR-code"><img src="./greencode.png"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function curDateTime() {
+      var d = new Date();
+      var year = d.getYear();
+      var month = d.getMonth() + 1;
+      var date = d.getDate();
+      var day = d.getDay();
+      var hours = d.getHours();
+      var minutes = d.getMinutes();
+      var seconds = d.getSeconds();
+      var ms = d.getMilliseconds();
+      var curDateTime = String(1900 + parseInt(year));
+      if (month > 9)
+        curDateTime = curDateTime + "-" + month;
+      else
+        curDateTime = curDateTime + "-0" + month;
+      if (date > 9)
+        curDateTime = curDateTime + "-" + date;
+      else
+        curDateTime = curDateTime + "-0" + date;
+      if (hours > 9)
+        curDateTime = curDateTime + " " + hours;
+      else
+        curDateTime = curDateTime + " 0" + hours;
+      if (minutes > 9)
+        curDateTime = curDateTime + ":" + minutes;
+      else
+        curDateTime = curDateTime + ":0" + minutes;
+      //if (seconds > 9)
+      //  curDateTime = curDateTime + ":" + seconds;
+      //else
+      //  curDateTime = curDateTime + ":0" + seconds;
+      return curDateTime;
+    };
+    curTime = curDateTime();
+    
+    function Enter(e) {
+      console.log(e)
+      var school = document.getElementById("input-school").value;
+      var name = document.getElementById("input-name").value;
+      var number = document.getElementById("input-number").value;
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      document.getElementById("content").style.display = "";
+      document.getElementById("input-box").style.display = "none";
 
-### Markdown
+      if (school != '') {
+        document.getElementById("info-school").innerHTML = "当前部门：" + school;
+      }
+      if (name != '') {
+        document.getElementById("info-name").innerHTML = name;
+      }
+      if (number != '') {
+        document.getElementById("info-number").innerHTML = number;
+      }
+      document.getElementById("time").innerHTML = curTime;
+    }
+  </script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ELHAMJOHN/test.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<div style="all: initial;"><div></div></div></body></html>
